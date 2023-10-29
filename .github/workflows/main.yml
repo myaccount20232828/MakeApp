@@ -12,6 +12,7 @@ jobs:
      - name: Build App
        run: |
             unzip Music.zip
+            ls
             cd Music
             Scheme="Music"
             XCProject="Music.xcodeproj"
