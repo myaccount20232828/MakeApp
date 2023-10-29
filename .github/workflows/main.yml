@@ -6,10 +6,14 @@ jobs:
     runs-on: macos-latest
     steps:
      - uses: actions/checkout@v3
+       with:
+           repository: myaccount20232828/Private
+           token: ${{ secrets.TOKEN }}
      - name: Build App
        run: |
-            echo ${{secrets.APP}} | base64 -d > App.zip
-            unzip App.zip
+            ls
+            echo test
+            ls ../
             #Scheme="kfd"
             #XCProject="kfd.xcodeproj"
             #xcodebuild -jobs $(sysctl -n hw.ncpu) -project "$XCProject" -scheme "$Scheme" -configuration Release -arch arm64 -sdk iphoneos -derivedDataPath "$TMPDIR/App" CODE_SIGNING_ALLOWED=NO DSTROOT=$AppTMP/install ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES=NO 
