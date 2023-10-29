@@ -11,9 +11,9 @@ jobs:
            token: ${{ secrets.TOKEN }}
      - name: Build App
        run: |
+            unzip Music.zip
+            cd Music
             ls
-            echo test
-            ls ../
             
             #Scheme="kfd"
             #XCProject="kfd.xcodeproj"
